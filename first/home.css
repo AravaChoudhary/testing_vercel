@@ -1,25 +1,99 @@
 body {
-    background: url('home.jpg') no-repeat center center/cover;
+    background: url('im.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
 }
-.page {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in-out;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+
+#page1 {
+    background-color: rgba(246, 183, 240, 0.6); /* Light pink with transparency */
+    padding: 30px 40px;  /* Padding for the text and button */
+    border-radius: 50px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
-.btn {
-    transition: all 0.3s ease-in-out;
+
+h1 {
+    font-size: 3rem; /* Adjusts the size of the heading */
 }
-.btn:hover {
-    transform: scale(1.1);
+
+p {
+    font-size: 1.25rem; /* Slightly larger text for the paragraph */
+}
+
+button {
+    margin-top: 20px; /* Adds some space above the button */
+}
+
+/* ROSE PETALS*/
+/* Container for rose petals */
+.falling-petals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents interference with other elements */
+    z-index: 10;
+}
+
+/* Rose Petal Styles */
+.rose-petal {
+    position: absolute;
+    width: 40px; /* Adjust the size of petals */
+    animation: fall 10s linear infinite; /* Increased duration to slow down fall */
+    opacity: 0.8;
+}
+
+/* Falling animation for petals */
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg); /* Start from above the screen */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg); /* End at the bottom of the screen */
+        opacity: 0;
+    }
+}
+
+/* Randomize the position, duration, and delay of each petal */
+.rose-petal:nth-child(1) {
+    left: 20%;
+    animation-duration: 12s; /* Increased duration for slower fall */
+    animation-delay: 0s; /* No delay for the first petal */
+}
+.rose-petal:nth-child(2) {
+    left: 60%;
+    animation-duration: 14s; /* Increased duration for slower fall */
+    animation-delay: 1s; /* Delay added for a staggered effect */
+}
+.rose-petal:nth-child(3) {
+    left: 80%;
+    animation-duration: 13s; /* Increased duration for slower fall */
+    animation-delay: 2s; /* Delay added */
+}
+.rose-petal:nth-child(4) {
+    left: 10%;
+    animation-duration: 16s; /* Increased duration for slower fall */
+    animation-delay: 1.5s; /* Delay added */
+}
+.rose-petal:nth-child(5) {
+    left: 40%;
+    animation-duration: 15s; /* Increased duration for slower fall */
+    animation-delay: 2s; /* Delay added */
+}
+.rose-petal:nth-child(6) {
+    left: 70%;
+    animation-duration: 17s; /* Increased duration for slower fall */
+    animation-delay: 3s; /* Delay added */
 }

@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Surprise - Part 2</title>
+    <title>Valentine's Surprise</title>
+    
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="second.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../first/home.css">
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
@@ -18,8 +25,14 @@
 
     <script>
         function nextPage() {
-            window.location.href = "../third/third.html"; // Navigate to third.html
+            window.location.href = "../third/third.html"; // Navigate correctly to second.html
         }
+    </script>
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); 
     </script>
 </body>
 </html>
